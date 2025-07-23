@@ -2,13 +2,13 @@
 
 typedef struct {
     int interval_minutes;
-    int duration_minutes;
-    char *message[1000];
+    int duration_seconds;
+    char *message;
     char *start_time[6];
     char *end_time[6];
     int eye_care = 0;
 }AppConfig;
 
-AppConfig parse_arguements(int argc, char *argv[]);
+AppConfig parse_arguments(int argc, char *argv[]);
 
 #endif
