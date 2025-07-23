@@ -53,3 +53,4 @@ AppConfig parse_arguments(int argc, char *argv[])
     }
     return config;
 }
+
