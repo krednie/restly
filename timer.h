@@ -5,4 +5,4 @@
 
 void start_timer(AppConfig config);
 
-#endif;
+#endif
