@@ -10,6 +10,7 @@
 
 void start_timer(AppConfig config)
 {
+    int ctime = ctime(NULL);
     int inter_sec = config.interval_minutes * 60;
     while (true)
     {
