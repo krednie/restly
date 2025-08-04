@@ -10,8 +10,8 @@ AppConfig parse_arguments(int argc, char *argv[])
         .duration_seconds = 20,
         .message = NULL,
         .eye_care = 1,
-        .start_time = "09:00",
-        .end_time = "17:00"
+        .start_time = "00:00",
+        .end_time = "23:59"
     };
 
       config.message = malloc(strlen("Time to rest your eyes!") + 1);
