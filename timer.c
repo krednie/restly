@@ -10,8 +10,13 @@
 
 void start_timer(AppConfig config)
 {
-    int ctime = ctime(NULL);
+    time_t ctime = time(NULL);
     int inter_sec = config.interval_minutes * 60;
+    int s_hour, e_hour, s_min, e_min;
+    sscanf( config.start_time, "%2d:%2d", &s_hour, &s_min );
+    sscanf( config.end_time, "%2d:%2d", &e_hour, &e_min );
+
+    
     while (true)
     {
             sleep(inter_sec);
