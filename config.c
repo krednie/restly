@@ -9,7 +9,7 @@ AppConfig parse_arguments(int argc, char *argv[])
         .interval_minutes = 20,
         .duration_seconds = 20,
         .message = NULL,
-        .eye_care = 0,
+        .eye_care = 1,
         .start_time = "09:00",
         .end_time = "17:00"
     };
@@ -45,9 +45,9 @@ AppConfig parse_arguments(int argc, char *argv[])
         {
             sscanf(argv[++i], "%5[^-]-%5s", config.start_time, config.end_time);
         }
-        else if (strcmp(argv[i], "--eyecare") == 0 || strcmp(argv[i], "-e") == 0)
+        else if ((strcmp(argv[i], "--eyecare") == 0 || strcmp(argv[i], "-e") == 0) && i+1 <argc)
         {
-            config.eye_care = 1;
+            config.eye_care = atoi(argv[++i]);
         }
 
     }

@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include "timer.h"
-#include "notifs.h"
 #include "config.h"
-#include "popup.h"
 
 // int main(int argc, char *argv[])
 // {
@@ -12,6 +10,7 @@
 
 int main( int argc, char *argv[])
 {
-    show_popup("yashh");
-    return 0;
+ AppConfig config = parse_arguments(argc, argv);
+
+ start_timer(config);
 }
