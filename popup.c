@@ -4,11 +4,9 @@
 #include "popup.h"
 
 void show_popup(const char *message, int gtk_dur) {
-    // Fork a child process to handle the popup
     pid_t pid = fork();
     
     if (pid == 0) {
-        // Child process - handles the popup
         int argc = 0;
         char **argv = NULL;
         gtk_init(&argc, &argv);
@@ -49,17 +47,13 @@ void show_popup(const char *message, int gtk_dur) {
         gtk_window_move(GTK_WINDOW(window), x, y);
 
         gtk_widget_show_all(window);
-
-        // Auto-close after 5 seconds
         g_timeout_add_seconds(gtk_dur, (GSourceFunc)gtk_main_quit, NULL);
 
         gtk_main();
-        exit(0); // Exit child process when popup closes
+        exit(0);
     } 
     else if (pid > 0) {
-        // Parent process - clean up zombie processes
         int status;
-        waitpid(pid, &status, WNOHANG); // Non-blocking wait
+        waitpid(pid, &status, WNOHANG);
     }
-    // If fork failed, just continue without popup
 }

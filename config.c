@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "config.h"
+#include "daemon.h"
 
 AppConfig parse_arguments(int argc, char *argv[])
 {
@@ -20,7 +21,7 @@ AppConfig parse_arguments(int argc, char *argv[])
         strcpy(config.message, "Time to rest your eyes!");
     }
 
-    for (int i = 1; i < argc; i++)
+    for (int i = 1; i < argc; i++) 
     {
         if ((strcmp(argv[i], "--interval") == 0 || strcmp(argv[i], "-i") == 0) && i + 1 < argc)
 
@@ -48,6 +49,10 @@ AppConfig parse_arguments(int argc, char *argv[])
         else if ((strcmp(argv[i], "--eyecare") == 0 || strcmp(argv[i], "-e") == 0) && i+1 <argc)
         {
             config.eye_care = atoi(argv[++i]);
+        }
+        else if ((strcmp(argv[i], "--stop") == 0))
+        {
+            stopdaemon();
         }
 
     }

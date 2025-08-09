@@ -11,14 +11,32 @@
 void start_timer(AppConfig config)
 {
     time_t ctime = time(NULL);
+    struct tm *lt = localtime(&ctime);
     int inter_sec = config.interval_minutes * 60;
     int s_hour, e_hour, s_min, e_min;
     sscanf( config.start_time, "%2d:%2d", &s_hour, &s_min );
     sscanf( config.end_time, "%2d:%2d", &e_hour, &e_min );
-
     
     while (true)
-    {
+    {   
+        time_t ctime = time(NULL);
+        struct tm *lt = localtime(&ctime);
+        int c_hour = lt->tm_hour;
+        int c_min = lt ->tm_min;
+        
+        int start_min = s_hour * 60 + s_min;
+        int end_min = e_hour * 60 + e_min;
+        int cur_min = c_hour * 60 + c_min;
+
+        bool active = false;
+        
+         if (start_min < end_min) {
+            active = (cur_min >= start_min && cur_min <= end_min);
+        } else {
+            active = (cur_min >= start_min || cur_min <= end_min);
+        }
+        if (active)
+        {
             sleep(inter_sec);
 
         if (config.eye_care == 0)
@@ -47,6 +65,7 @@ void start_timer(AppConfig config)
             sleep(3);
             show_popup("Good job! wait for me again!ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧", 2);
             
+        }
         }
 
     }

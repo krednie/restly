@@ -1,16 +1,15 @@
 #include <stdio.h>
 #include "timer.h"
+#include "daemon.h"
 #include "config.h"
 
-// int main(int argc, char *argv[])
-// {
-// send_notif("yash", "dsfsdfsd");
-// return 0;
-// }
 
-int main( int argc, char *argv[])
+int main(int argc, char *argv[])
+
+
 {
- AppConfig config = parse_arguments(argc, argv);
+    AppConfig config = parse_arguments(argc, argv);
+    daemonize();
 
  start_timer(config);
 }
