@@ -53,6 +53,7 @@ AppConfig parse_arguments(int argc, char *argv[])
         else if ((strcmp(argv[i], "--stop") == 0))
         {
             stopdaemon();
+            exit(EXIT_SUCCESS);
         }
 
     }
