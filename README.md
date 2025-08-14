@@ -4,9 +4,9 @@
 
 
 **Restly gently helps you solve all your eyecare needs while using your favourite device(will soon expand to other platforms)**
-**Restly helps you reduce eye strain, stay focused, and keep your energy up. No more headaches, no more deteriorating eyesignt, no more thicker glasses.**
+**Restly helps you reduce eye strain, stay focused, and keep your energy up. No more headaches, no more deteriorating eyesignt, no more thickening glasses.**
 
-Restly runs silently in the background and sends gentle popup notifications to remind you to take breaks, blink, and perform eye exercises based on the 20-20-20 rule and follow best ergonomic practices for your health. 
+Restly runs silently in the background and sends gentle popup notifications to remind you to take breaks, blink, and perform eye exercises based on the 20-20-20 rule and follow best ergonomic practices for your health. Moreover you can setup your own customized notifications! 
 
 ## ✨ Features
 
