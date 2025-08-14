@@ -119,6 +119,7 @@ if [[ "$use_systemd" -eq 1 ]]; then
 fi
 printf '%s\n' "- Autostart: ${desktop_path/$HOME/~}"
 printf "\nrestly is not running right now!\n"
-printf "\n to write your own easy command. read more on the README.md on https://github.com/krednie/restly example: restly -i 20 -e 1\n"
+printf "\nto write your own easy command. read more on the README.md on https://github.com/krednie/restly example: restly -i 20 -e 1\n"
+printf "\nor simply type restly to run it with default settings. (interval = 20min, eyecare = on, active hours = always while using pc\n"
 printf "\nyoure all set!\n"
 printf "\nMade with ❤ | KREDNIE\n"
