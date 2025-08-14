@@ -13,9 +13,9 @@ Restly runs silently in the background and sends gentle popup notifications to r
 - 👁️ **Built-in eye care routine** - Guided eye exercises and neck stretches
 - 🎨 **Beautiful notifications** - Elegant, non-intrusive popup design
 - 🚀 **Auto-start** - Automatically starts with your system
-- 🎯 **Custom messages** - Create your own reminder messages
-- ⏰ **Active hours** - Only show reminders during specified time periods
-- 🕐 **Customizable intervals** - Set break reminders at your preferred frequency
+- 🎯 **Custom messages** - Create your own popup messages
+- ⏰ **Active hours** - Only show popups during specified time periods
+- 🕐 **Customizable intervals** - Set break popups at your preferred frequency
 - 🔧 **Swift operation** - Runs quietly in the background. Easy to start, configure and stop
 
 ## 📦 Installation
@@ -80,7 +80,7 @@ restly --active-hours 09:00-17:00
 |--------|-------|-------------|---------|
 | `--interval` | `-i` | Break interval in minutes | `20` |
 | `--duration` | `-d` | Popup duration in seconds | `20` |
-| `--message` | `-m` | Custom reminder message | `"Time to rest your eyes! (if eyecare disabled)"` |
+| `--message` | `-m` | Custom popup message | `"Time to rest your eyes! (if eyecare disabled)"` |
 | `--eyecare` | `-e` | Enable eye care routine (1) or custom message (0) | `1` |
 | `--active-hours` | | Active time range (e.g., `09:00-17:00`) | `00:00-23:59` |
 | `--stop` | | Stop the running daemon | |
@@ -145,7 +145,7 @@ restly --interval 30 --message "Stand up and stretch!" --eyecare 0
 
 ### For Students
 ```bash
-# Frequent reminders during study sessions
+# Frequent popups during study sessions
 restly --interval 25 --active-hours 08:00-22:00 --eyecare 1
 ```
 
