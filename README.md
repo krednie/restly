@@ -10,13 +10,13 @@ Restly runs silently in the background and sends gentle popup notifications to r
 
 ## ✨ Features
 
-- 🕐 **Customizable intervals** - Set break reminders at your preferred frequency
 - 👁️ **Built-in eye care routine** - Guided eye exercises and neck stretches
-- 🎯 **Custom messages** - Create your own reminder messages
-- ⏰ **Active hours** - Only show reminders during specified time periods
-- 🔧 **Swift operation** - Runs quietly in the background. Easy to start, configure and stop
 - 🎨 **Beautiful notifications** - Elegant, non-intrusive popup design
 - 🚀 **Auto-start** - Automatically starts with your system
+- 🎯 **Custom messages** - Create your own reminder messages
+- ⏰ **Active hours** - Only show reminders during specified time periods
+- 🕐 **Customizable intervals** - Set break reminders at your preferred frequency
+- 🔧 **Swift operation** - Runs quietly in the background. Easy to start, configure and stop
 
 ## 📦 Installation
 
